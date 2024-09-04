@@ -2,6 +2,11 @@
 
 divide <- function(x){
 
+  # Tilføj tjek som sørger for at input argument x != character
+  if(is.character(x)){
+    stop("x is of type character. Supply value of type numeric or factor")
+  }
+
   x/100
 
 }
